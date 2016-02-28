@@ -1,0 +1,1 @@
+!function(){var a=$("#sideBarToggle"),e=$("#sideBarToggle i.fa");a.on("click",function(){$("#sidebar");$("#sidebar").toggleClass("hide-sidebar");$("#wrapper");$("#wrapper").toggleClass("hide-sidebar"),$("#wrapper").hasClass("hide-sidebar")?($(e).removeClass("fa-angle-left"),$(e).addClass("fa-angle-right")):($(e).removeClass("fa-angle-right"),$(e).addClass("fa-angle-left"))})}();

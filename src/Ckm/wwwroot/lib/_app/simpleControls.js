@@ -1,0 +1,1 @@
+!function(){"use strict";function t(){var t=["/views/waitCursor1.html","/views/waitCursor2.html","/views/waitCursor3.html","/views/waitCursor_3d_mesh_box.html","/views/cssload_en_spinner_5.html"],r=t.length,s=Math.floor(Math.random()*r)+1,e=t[s-1];return{scope:{show:"=displayWhen"},restrict:"E",templateUrl:e}}angular.module("simpleControls",[]).directive("waitCursor",t)}();
