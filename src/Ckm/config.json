@@ -1,0 +1,9 @@
+﻿{
+  "AppSettings": {
+    "SiteEmailAddress": "johnkennerley@hotmail.com",
+    "BingKeyElsewhere": "BIG-LONG-KEY"
+  },
+  "Data": {
+    "CkmContextConnection": "Server=(localdb)\\ProjectsV12;Database=Ckm; Trusted_Connection=true;  MultipleActiveResultSets=true "
+  }
+}
