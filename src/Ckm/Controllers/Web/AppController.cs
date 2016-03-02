@@ -75,5 +75,12 @@ namespace Ckm.Controllers.Web
 
             return View();
         }
+
+        public IActionResult ErrorJester()
+        {
+            throw new System.Exception("App/ErrorJester");
+            return View(null);
+        }
+
     }
 }

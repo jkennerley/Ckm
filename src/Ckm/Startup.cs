@@ -112,8 +112,24 @@
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public async void Configure(IApplicationBuilder app, CkmContextSeedData seedData, ILoggerFactory loggerFactory)
+        public async void Configure(
+            IApplicationBuilder app, 
+            CkmContextSeedData seedData, 
+            ILoggerFactory loggerFactory,
+            IHostingEnvironment env)
         {
+
+            if (env.IsDevelopment())
+            {
+                loggerFactory.AddDebug(LogLevel.Information);
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                loggerFactory.AddDebug(LogLevel.Error);
+                app.UseExceptionHandler("/App/Error");
+            }
+
             //  AutoMapper
             // old way
             AutoMapper.Mapper.Initialize(config =>
@@ -128,10 +144,6 @@
                 cfg.CreateMap<Trip, TripViewModel>().ReverseMap();
             });
             Mapper = autoMapperConfig.CreateMapper();
-
-            // out of the box either {Console  | DebugWindow }
-            // loggerFactory.AddDebug(LogLevel.Information);
-            loggerFactory.AddDebug(LogLevel.Warning);
 
             #region
 
