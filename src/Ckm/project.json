@@ -38,10 +38,17 @@
 
   "exclude": [
     "wwwroot",
-    "node_modules"
+    "node_modules",
+    "bower_components"
   ],
   "publishExclude": [
     "**.user",
     "**.vspscc"
-  ]
+  ],
+  "scripts" : {
+    "prepublish": [ "npm install", "bower install" ],
+    "prepare": "gulp minify"
+
+  }
+
 }

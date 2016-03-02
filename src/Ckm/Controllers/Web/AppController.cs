@@ -81,6 +81,5 @@ namespace Ckm.Controllers.Web
             throw new System.Exception("App/ErrorJester");
             return View(null);
         }
-
     }
 }
